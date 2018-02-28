@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level 3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" /> <!-- jquery UI for dialog box-->
+	<link rel="stylesheet" type="text/css" href="css/bl3.css"> <!-- my style sheet -->
+</head>
+<body>
+
+	<div class="row mr-0 ml-0 h-100 col-sm-12">  <!-- page container -->
+		<div class="container col-md-9 col-sm-12 ml-0 mr-0 mt-auto mb-auto">  <!-- card container -->
+
+				<div id="picbox" class="text-center col-sm-12">
+				  <div id="boxcard" class="h-100"></div>
+				</div>			
+
+		</div> <!-- end of card container -->
+
+		<div class="container col-md-3 col-sm-12 info mt-5 mb-5 mr-0 ml-0"> <!-- sidebar -->
+
+			<div class="text-md-right text-sm-center"> <!-- side header -->
+				<audio autoplay loop id="myAudio"> <!-- audio -->
+					<source src="sound/hp.mp3" type="audio/mpeg">
+				</audio> <!-- end of audio -->
+				<div class="mt-2 lead icon"> <!-- music icon -->
+					<div>
+						<a href="#" class="speaker"><span></span></a>
+					</div>
+				</div> <!-- end of music icon -->
+			</div> <!-- end of side header -->
+			
+			<div class="text-center m-auto"> <!-- side title -->
+				<h1>Level 3</h1>
+			</div> <!-- end of side title -->
+
+			<div class="mt-5 timer text-center"> <!-- side time -->
+				<h2>Time: <br><span></span></h2>
+			</div> <!-- end of side time -->
+
+		</div> <!-- end of sidebar -->
+		
+		<div id="dialog-confirm" role="dialog" style="display:none;" class="text-center"> <!-- dialog --> 
+	      <div id="tabs">
+	        <a href="#tabs-1"></a>
+	      <div id="tabs-1" class="mt-2 display-1">
+	        <p>Congratulations, you won! <br> Click Next to continue.</p>
+	      </div>
+	        <div class="footer">
+	          <a class="btn btn-warning mt-3 mb-4 dialog-btn" href="nav3.html" role="button">Next</a>
+	        </div>  
+	      </div>
+		</div> <!-- end of dialog --> 
+
+	</div> <!-- end of page container -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> <!-- jquery UI for dialog box-->
+	<script type="text/javascript" src="js/bl3.js"></script> <!-- my script -->
+</body>
+</html>

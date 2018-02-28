@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" /> <!-- jquery UI for dialog box-->
+	<link rel="stylesheet" type="text/css" href="css/nav3.css"> <!-- my style sheet -->
+</head>
+<body>
+
+	<div class=""> <!-- page container -->
+
+	<div class="container" id="container"> <!-- animation -->
+      <div id="harry"></div>
+    </div> <!-- end of animation -->
+
+    <div id="dialog-confirm" role="dialog" style="display:none;" class="text-center"> <!-- dialog --> 
+	      <div id="tabs">
+	        <a href="#tabs-1"></a>
+	      <div id="tabs-1" class="mt-2 display-1">
+	        <p>Well done! Harry is at Hogwarts now!</p>
+	      </div>
+	        <div class="footer">
+	          <a class="btn btn-warning mt-3 mb-4 dialog-btn" href="index.html" role="button" id="startAgain">Start Again</a><br>
+	          <a class="btn btn-warning mt-3 dialog-btn" href="bl3.html" role="button" id="close">Close</a>
+	        </div>  
+	      </div>
+		</div> <!-- end of dialog --> 
+
+	</div> <!-- end of page container -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> <!-- jquery UI for dialog box-->
+	<script type="text/javascript" src="js/nav.js"></script> <!-- my script -->
+</body>
+</html>
