@@ -1,0 +1,88 @@
+body, html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: hpfont;
+	color: #cca33d;
+	text-shadow: 1px 1px #000;
+	
+}
+
+body {
+  background-image: url("../img/hpBackground4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: relative;
+}
+
+@font-face {
+    font-family: hpfont;
+    src: url(../fonts/hp.TTF);
+}
+
+.container {
+  width:20%;
+  height:100px;
+  margin: 17% 78%;
+  /*border: 1px solid black;*/
+  position: relative;
+  -ms-transform: rotate(-8deg); /* IE 9 */
+  -webkit-transform: rotate(-8deg); /* Safari */
+  transform: rotate(-8deg);
+}
+
+#harry {
+	background: url("../img/harry.png");
+	background-repeat: no-repeat;
+  	height:100%;
+  	width:40%;
+  	margin-left: 69%;
+	position: absolute;
+}
+
+/* 
+=======================
+dialog
+=======================
+*/
+
+
+/* dialog */
+.ui-widget-content {
+  width:100%!important;
+  left:0!important;
+  background: rgb(107, 143, 175)!important;
+  border: none!important;
+  font-family:hpfont;
+}
+
+#tabs-1 p {
+  line-height: 1.8em;
+}
+
+.ui-dialog {
+  -webkit-font-smoothing: antialiased;
+}
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0;
+  visibility: hidden;
+}
+
+.ui-widget-header .ui-state-default {
+  border: none;
+  
+  visibility: visible;
+}
+.ui-widget .ui-widget {
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+#tabs-1{
+  font-size: 2.5rem;
+}
+
+.dialog-btn{
+  font-size: 2.0rem;
+}
