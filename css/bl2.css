@@ -5,7 +5,6 @@ body, html {
 	font-family: hpfont;
 	color: #cca33d;
 	text-shadow: 1px 1px #000;
-	
 }
 
 body {
@@ -15,15 +14,19 @@ body {
 }
 
 @font-face {
-    font-family: hpfont;
-    src: url(../fonts/hp.TTF);
+  font-family: hpfont;
+  src: url(../fonts/hp.TTF);
 }
 
 h1{
 	font-size: 3.5rem;
 }
 
-/* audio icon*/
+/* 
+=======================
+AUDIO ICON
+=======================
+*/
 
 .speaker {
   min-height: 48px;
@@ -79,8 +82,6 @@ h1{
 	}
 }
 
-
-
 /* 
 =======================
 GAME
@@ -101,25 +102,64 @@ GAME
 #boxcard div img {
   display: none;
   z-index: 3;
-  width: 76%;
+  width: 66%;
   height: 100%;
-  margin-right: 25%;
+  margin-right: 35%;
 
 }
 
-/*#card{
-  width: 100%;
-}*/
-
-
 /* 
 =======================
-dialog
+RESPONSIVENESS
 =======================
 */
 
+@media (max-width: 991px) {
+  .page{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-/* dialog */
+  .aside {
+    flex-direction: column;
+    order:-1;
+    width: 100%;
+    flex: 1 0 150px;
+    font-size: 0.5rem;
+  } 
+  body {
+    background-size: cover;
+    background-repeat: repeat;
+  }
+}
+
+@media (max-width: 575px) {
+  #boxcard div{
+    height: 15rem;
+    width:46%;
+    margin: 0.3rem;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
+  #boxcard div img {
+    display: none;
+    z-index: 3;
+    width: 96%;
+    height: 100%;
+  }
+}
+
+/* 
+=======================
+DIALOG
+=======================
+*/
+
 .ui-widget-content {
   width:100%!important;
   left:0!important;

@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Harry Potter Memory Game - Starting Page</title>
+	<title>Harry Potter Memory Game - Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"> <!-- my style sheet -->
 </head>
 <body>
 
+	<div class="gradient"> <!-- Main container with backbround image-->
 
-<div class="gradient"> <!-- Main container with backbround image-->
+		<audio autoplay loop id="myAudio"> <!-- audio -->
+			<source src="sound/hp.mp3" type="audio/mpeg">
+		</audio> <!-- end of audio -->
 
-	<audio autoplay loop id="myAudio"> <!-- audio -->
-		<source src="sound/hp.mp3" type="audio/mpeg">
-	</audio> <!-- end of audio -->
+		<div class="row">
+			<div class="col-md-6"> <!-- logo -->
 
-	<div class="row">
-		<div class="col-md-6"> <!-- logo -->
+				<div class="pl-5 pt-5 mr-0 col-md-6">
+					<img src="img/HarryPotterLogo.png" class="img-logo">
+					<h1 class="h1-logo text-center">memory game</h1>
+				</div>
+			</div> <!-- end of logo -->
 
-			<div class="pl-5 pt-5 mr-0 col-md-6">
-				<img src="img/HarryPotterLogo.png" class="img-logo">
-				<h1 class="h1-logo text-center">memory game</h1>
-			</div>
-		</div> <!-- end of logo -->
+			<div class="col-md-6 text-md-right text-sm-center pr-5 pt-5 pl-5 lead icon"> <!-- music icon -->
+				<div>
+					<a href="#" class="speaker"><span></span></a>
+				</div>
+			</div> <!-- end of music icon -->
+		</div> <!-- end of row -->
+		
 
-		<div class="col-md-6 text-md-right text-sm-center pr-5 pt-5 pl-5 lead icon"> <!-- music icon -->
-			<div>
-				<a href="#" class="speaker"><span></span></a>
-			</div>
-		</div> <!-- end of music icon -->
-	</div> <!-- end of row -->
-	
+		<div class="row"> <!-- buttons -->
+			<div class="container col-xs-12 text-center m-auto">
+				<a class="btn btn-warning mt-5 mb-4" href="bl1.html">Play</a><br>
+				<a class="btn btn-warning mb-4" role="button" data-toggle="modal" data-target="#instructions">Instructions</a><br>
+			</div> <!-- end of container -->
+		</div> <!-- end of buttons -->
+		
 
-	<div class="row"> <!-- buttons -->
-		<div class="container col-xs-12 text-center m-auto">
-			<a class="btn btn-warning mt-5 mb-4" href="bl1.html" role="button">Play</a><br>
-			<a class="btn btn-warning mb-4" role="button" data-toggle="modal" data-target="#instructions">Instructions</a><br>
-			<a class="btn btn-warning mb-4" href="#" role="button">Options</a>
-		</div> <!-- end of container -->
-	</div> <!-- end of buttons -->
-	
-
-	<div class="modal fade" id="instructions" role="dialog"> <!-- Instructions -->
-	    <div class="modal-dialog">  <!-- Modal dialog-->
-	      <div class="modal-content"> <!-- Modal content-->
-	        <div class="modal-header"> <!-- Modal header-->
-	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        </div> <!-- end of Modal header-->
-	        <div class="modal-body"> <!-- Modal body-->
-	          <h2>Help Harry to reach Hogwarts by solving the upcoming challanges!</h2>
-	          <p class="modal-text mt-5 text-justify">Choose a card and turn it over by clicking on it. Then selects another card and turn it over.<br> If the two cards are a matching pair then they stayed turned over and you chose another card. The process continues until all cards on the board will be turned over.<br>
-	          After winning the first game, you have to play two more rounds of memory game. Each winnings will move Harry further in his goal to reach Hogwarts. Getting to Hogwarts would mean the beginning of another long-waited year at Hogwarts which he calls home.<br>
-	          Let the adventure begin!</p>
-	        </div> <!-- end of Modal body-->
-	        <div class="modal-footer"> <!-- Modal footer-->
-	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        </div> <!-- end of Modal footer-->
-	      </div> <!-- End of Modal content-->
-	    </div> <!-- end of Modal dialog-->
-	</div> <!-- End of Instructions -->
+		<div class="modal fade" id="instructions" role="dialog"> <!-- Instructions -->
+		    <div class="modal-dialog">  <!-- Modal dialog-->
+		      <div class="modal-content"> <!-- Modal content-->
+		        <div class="modal-header"> <!-- Modal header-->
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div> <!-- end of Modal header-->
+		        <div class="modal-body"> <!-- Modal body-->
+		          <h2>Help Harry to reach Hogwarts by solving the upcoming challanges!</h2>
+		          <p class="modal-text mt-5 text-justify">Choose a card and turn it over by clicking on it. Then select another card and turn it over.<br> If the two cards are a matching pair then they disappear. If not, they both turn back. Then you chose another card. The process continues until all cards on the board will be turned over.<br>
+		          After winning the first game, you will be directed to the next page where Harry gets one step closer to Hogwarts. Then you have to play two more rounds of memory game. Each winnings will move Harry further in his goal to reach Hogwarts. Getting to Hogwarts would mean the beginning of another long-waited year at Hogwarts which he calls home.<br>
+		          Let the adventure begin!</p>
+		        </div> <!-- end of Modal body-->
+		        <div class="modal-footer"> <!-- Modal footer-->
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div> <!-- end of Modal footer-->
+		      </div> <!-- End of Modal content-->
+		    </div> <!-- end of Modal dialog-->
+		</div> <!-- End of Instructions -->
 
 
-</div> <!-- end of gradient/main container -->
+	</div> <!-- end of gradient/main container -->
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
