@@ -34,5 +34,5 @@ After winning the first game, you will be directed to the next page where Harry 
 * jQuery UI 1.12.1
 
 
-##Issue - Fixed!
+## Issue - Fixed!
 When clicking on a card before the previous animation had finished, the program stopped running. Fixed by disabling the clicks until the previous animation has finished with a setTimeout() function. 
