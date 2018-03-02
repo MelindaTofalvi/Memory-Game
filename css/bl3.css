@@ -89,9 +89,9 @@ GAME
 
 #boxcard div{
   float: left;
-  width: 19%;
+  width: 7rem;
   height: 11rem;
-  margin: 1rem;
+  margin: 0.5rem 4rem;
   cursor: pointer;
   background-image: url("../img/level1/hpCover.jpg");
   background-repeat: no-repeat;
@@ -101,9 +101,8 @@ GAME
 #boxcard div img {
   display: none;
   z-index: 3;
-  width: 52%;
   height: 100%;
-  margin-right: 49%;
+  margin-right: 22%;
 }
 
 /* 
@@ -111,6 +110,13 @@ GAME
 RESPONSIVENESS
 =======================
 */
+
+@media (max-width: 1300px) {
+  body {
+    background-size: cover;
+    background-repeat: repeat;
+  }
+}
 
 @media (max-width: 991px) {
   .page{
@@ -126,10 +132,6 @@ RESPONSIVENESS
     flex: 1 0 150px;
     font-size: 0.5rem;
   } 
-  body {
-    background-size: cover;
-    background-repeat: repeat;
-  }
 }
 
 @media (max-width: 575px) {

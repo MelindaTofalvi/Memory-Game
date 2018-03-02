@@ -105,6 +105,7 @@ function OpenCard() {
 	if ($("#" + id + " img").is(":hidden")) {
 		$(Source + " div").unbind("click", OpenCard);
 		$("#" + id + " img").fadeIn('slow');
+		$("#" + id + " img").css("width", "100%");
 		if (ImgOpened == "") {
 			$("#" + id + " img").css("box-shadow", "").css("transition", "");
 			BoxOpened = id;
