@@ -15,20 +15,28 @@ GAME
 =======================
 */
 
-
-  $( "#dialog" ).dialog({
+// dont't auto open the dialog box
+$( "#dialog" ).dialog({
     autoOpen: false
 });
 
+//cheat
+$(document).keypress(function(event){
+	var keycode = (event.keyCode ? event.keyCode : event.which);
+	if(keycode == '13'){
+		callDialog();
+	}
+});
 
+// variables for the game
 var BoxOpened = "";
 var ImgOpened = "";
 var Counter = 0;
 var ImgFound = 0;
 var gameOver = false;
-
 var Source = "#boxcard";
 
+//images for the game
 var ImgSource = [
   "img/level1/hp1.jpg",
   "img/level1/hp2.jpg",
@@ -38,30 +46,23 @@ var ImgSource = [
   "img/level1/hp6.jpg"
 ];
 
-$(document).keypress(function(event){
-
-	var keycode = (event.keyCode ? event.keyCode : event.which);
-	if(keycode == '13'){
-		callDialog();
-	}
-
-});
-
+//creating card holder divs
 $(function() {
 	for (var y = 1; y < 3 ; y++) {
 		$.each(ImgSource, function(i, val) {
 			$(Source).append("<div id=card" + y + i + "><img src=" + val + " />");
 		});
 	}
-		$(Source + " div").click(OpenCard);
-		ShuffleImages();
+	$(Source + " div").click(OpenCard);
+	ShuffleImages();
 });
 
-
+// get random number for Shuffleimages() function
 function RandomFunction(MaxValue, MinValue) {
-		return Math.round(Math.random() * (MaxValue - MinValue) + MinValue);
-	}
+	return Math.round(Math.random() * (MaxValue - MinValue) + MinValue);
+}
 	
+//shuffle images
 function ShuffleImages() {
 	var ImgAll = $(Source).children();
 	var ImgThis = $(Source + " div:first-child");
@@ -71,12 +72,9 @@ function ShuffleImages() {
 		ImgArr[i] = $("#" + ImgThis.attr("id") + " img").attr("src");
 		ImgThis = ImgThis.next();
 	}
-	
-		ImgThis = $(Source + " div:first-child");
-	
+	ImgThis = $(Source + " div:first-child");
 	for (var z = 0; z < ImgAll.length; z++) {
-	var RandomNumber = RandomFunction(0, ImgArr.length - 1);
-
+		var RandomNumber = RandomFunction(0, ImgArr.length - 1);
 		$("#" + ImgThis.attr("id") + " img").attr("src", ImgArr[RandomNumber]);
 		ImgArr.splice(RandomNumber, 1);
 		ImgThis = ImgThis.next();
@@ -97,32 +95,23 @@ $("#picbox").one("click", function(e){
 		}
 		if(timerOn === false){
 		clearInterval(timer);
-	}
-		
+		}
 	}, 1000);
-	
-	})
+})
 
-
+// open card on click
 function OpenCard() {
-
 	var id = $(this).attr("id");
-
 	if ($("#" + id + " img").is(":hidden")) {
 		$(Source + " div").unbind("click", OpenCard);
-		
-		
-
 		$("#" + id + " img").fadeIn('slow');
-
-
+		$("#" + id + " img").css("width", "100%");
 		if (ImgOpened == "") {
 			$("#" + id + " img").css("box-shadow", "").css("transition", "");
-			
 			BoxOpened = id;
 			ImgOpened = $("#" + id + " img").attr("src");
 			setTimeout(function() {
-				$(Source + " div").bind("click", OpenCard)
+				$(Source + " div").bind("click", OpenCard);
 			}, 300);
 		} else {
 			CurrentOpened = $("#" + id + " img").attr("src");
@@ -132,22 +121,19 @@ function OpenCard() {
 				setTimeout(function() {
 					$("#" + id + " img").css("box-shadow", "0 0 1em 0.5em maroon").css("transition", "outline 0.6s linear");
 					$("#" + BoxOpened + " img").css("box-shadow", "0 0 1em 0.5em maroon").css("transition", "outline 0.6s linear");
-					setTimeout(function() {
+					setTimeout(function() {		
 						$("#" + id + " img").fadeOut(500);
 						$("#" + BoxOpened + " img").fadeOut(500);
 						BoxOpened = "";
-						ImgOpened = "";
-					}, 1000);
-					
-					
+						ImgOpened = "";		
+					}, 500);	
 				}, 1000);
 			} else {
 				$("#" + id + " img").css("box-shadow", "0 0 1em 0.5em green").css("transition", "outline 0.6s linear");
 				$("#" + BoxOpened + " img").css("box-shadow", "0 0 1em 0.5em green").css("transition", "outline 0.6s linear");
 				setTimeout(function() {
 					$("#" + id + " img").parent().css("visibility", "hidden");
-				$("#" + BoxOpened + " img").parent().css("visibility", "hidden");
-				
+					$("#" + BoxOpened + " img").parent().css("visibility", "hidden");
 				BoxOpened = "";
 				ImgOpened = "";
 				}, 1000);
@@ -155,23 +141,21 @@ function OpenCard() {
 			}
 			setTimeout(function() {
 				$(Source + " div").bind("click", OpenCard)
-			}, 400);
+			}, 1501);	
 		}
-		console.log(ImgFound.length);
 		Counter++;
 		$("#counter").html("" + Counter);
 		if (ImgFound == ImgSource.length) {
-			console.log("hello");
 			$("#counter").prepend('<span id="success">You Found All Pictues With </span>');
 			timerOn = false;
 			setTimeout(function() {
 				callDialog();
 			}, 1500);
-			
 		}
 	}
 }
 
+// game over dialog
 function callDialog(){
 	$('#dialog-confirm')
   // Dialog will slide down from top of document
@@ -180,7 +164,7 @@ function callDialog(){
         offset = widget.offset();
     widget
       .css('top', -widget.outerWidth() + 'px')
-      .animate({ top: offset.top }, { duration: 300 });
+      .animate({ top: offset.top }, { duration: 1000 });
   })
     .dialog({
     resizable: false,

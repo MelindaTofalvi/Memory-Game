@@ -21,10 +21,9 @@ body {
 }
 
 .container {
-  width:20%;
-  height:100px;
-  margin: 20% 61%;
-  /*border: 1px solid black;*/
+  height:6rem;
+  margin-top:18%;
+  margin-left:73%;
   position: relative;
   -ms-transform: rotate(-8deg); /* IE 9 */
   -webkit-transform: rotate(-8deg); /* Safari */
@@ -33,11 +32,10 @@ body {
 
 #harry {
 	background: url("../img/harry.png");
-	background-repeat: no-repeat;
-  	height:100%;
-  	width:40%;
-  	margin-left: 69%;
-	position: absolute;
+  background-repeat: no-repeat;
+  height:100%;
+  width:100%;
+  position: relative;
 }
 
 /* 

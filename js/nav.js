@@ -1,4 +1,8 @@
-//call animation whne page loaded
+/* 
+=======================
+CALL ANIMATION WHEN PAGE LOADED
+=======================
+*/
 $(document).ready(function(){
   setTimeout(function(){
     myMove();
@@ -6,7 +10,11 @@ $(document).ready(function(){
   
 });
 
-// move Harry 
+/* 
+=======================
+MOVE HARRY
+=======================
+*/
 function myMove() {
   var elem = document.getElementById("harry");   
   var pos = 0;
@@ -14,7 +22,7 @@ function myMove() {
   function frame() {
     if (pos == 70) {
       clearInterval(id);
-        callDialog();
+      callDialog();
     } else {
       pos++; 
       elem.style.right = pos + '%'; 
@@ -22,7 +30,11 @@ function myMove() {
   }
 }
 
-//dialog box when animation finished
+/* 
+=======================
+DIALOG BOX WHEN ANIMATION FINISHED
+=======================
+*/
 function callDialog(){
   $('#dialog-confirm')
   // Dialog will slide down from top of document
@@ -48,8 +60,11 @@ $('#tabs').tabs({
 });
 }
 
-
-// click on buttons on nav3.html
-$("#close").click(function(){
-  window.close();
+/* 
+=======================
+CLICK ON CLOSE BUTTON ON NAV3.HTML
+=======================
+*/
+$("#close").click(function(e){
+  $(this).closest('.ui-dialog-content').dialog('close'); 
 })

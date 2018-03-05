@@ -9,18 +9,19 @@
 </head>
 <body>
 
-	<div class="row mr-0 ml-0 h-100 col-sm-12">  <!-- page container -->
-		<div class="container col-md-9 col-sm-12 ml-0 mr-0 mt-auto mb-auto">  <!-- card container -->
+	<div class="row mr-0 ml-0 h-100 col-sm-12 main">  <!-- page container -->
 
-				<div id="picbox" class="text-center col-sm-12">
-				  <div id="boxcard" class="h-100"></div>
+		<div class="container col-lg-10 col-sm-12 ml-0 mr-0 mt-auto mb-auto">  <!-- card container -->
+
+				<div id="picbox" class="text-center">
+				  <div id="boxcard" class="h-100 text-center"></div>
 				</div>			
 
 		</div> <!-- end of card container -->
 
-		<div class="container col-md-3 col-sm-12 info mt-5 mb-5 mr-0 ml-0"> <!-- sidebar -->
+		<div class="container col-lg-2 col-sm-12 info mt-5 mb-5 mr-0 ml-0 aside"> <!-- sidebar -->
 
-			<div class="text-md-right text-sm-center"> <!-- side header -->
+			<div class="text-md-right text-sm-center col-lg-12 col-sm-2 float-left"> <!-- side header -->
 				<audio autoplay loop id="myAudio"> <!-- audio -->
 					<source src="sound/hp.mp3" type="audio/mpeg">
 				</audio> <!-- end of audio -->
@@ -42,15 +43,17 @@
 		</div> <!-- end of sidebar -->
 		
 		<div id="dialog-confirm" role="dialog" style="display:none;" class="text-center"> <!-- dialog --> 
+
 	      <div id="tabs">
 	        <a href="#tabs-1"></a>
 	      <div id="tabs-1" class="mt-2 display-1">
 	        <p>Congratulations, you won! <br> Click Next to continue.</p>
 	      </div>
 	        <div class="footer">
-	          <a class="btn btn-warning mt-3 mb-4 dialog-btn" href="nav3.html" role="button">Next</a>
+	          <a class="btn btn-warning mt-3 mb-4 dialog-btn" href="nav3.html" role="button" onclick="close()">Next</a>
 	        </div>  
 	      </div>
+	      
 		</div> <!-- end of dialog --> 
 
 	</div> <!-- end of page container -->
